@@ -1,15 +1,20 @@
 <template>
-  <div>
-    <h2>Registro de Usuario</h2>
-  </div>
+    <div class="fondo-login">
+     <Ingreso/>
+
+    </div>
 </template>
 
 <script>
+import Ingreso from '../components/Ingreso.vue'
 export default {
-
+  name: 'Registro',
+  components:{
+    Ingreso
+  }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
