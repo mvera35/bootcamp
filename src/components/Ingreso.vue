@@ -13,11 +13,11 @@
                   <v-col cols="12" md="8">
                     <v-card-text class="mt-12">
                       <h2 class=" display-2">Registrarse</h2>
-                      <v-form>
-                         <v-text-field label="Email" name="email" type="email" color="#0F1B68" >
+                      <v-form @submit.prevent ="registerButton">
+                         <v-text-field label="Email" name="email" type="email" color="#0F1B68" v-model="email" >
 
                          </v-text-field>
-                         <v-text-field label="Contraseña" name="password" type="password"  color="#0F1B68">
+                         <v-text-field label="Contraseña" name="password" type="password"  color="#0F1B68" v-model="password">
 
                          </v-text-field>
                           <v-text-field label="Repetir contraseña" name="password" type="password"  color="#0F1B68">
@@ -26,7 +26,7 @@
                       </v-form>
                     </v-card-text>
                     <div class="boton">
-                      <v-btn rounded color="#000B54" dark>Ingresar</v-btn>
+                      <v-btn rounded color="#000B54" dark @click="registerButton">Ingresar</v-btn>
                     </div>
                 </v-col>
                 </v-row>
@@ -42,10 +42,29 @@
 </template>
 
 <script>
+import {auth} from '../firebase'
 export default {
-    name:'Ingreso'
+  name:'Ingreso',
+  data() {
+    return {
+      email: '',
+      password: '',
+
+    }
+  },
+methods: {
+registerButton(){
+  auth.createUserWithEmailAndPassword(this.email,this.password).then(() =>{
+  this.$router.push('../PerfilUsuario')
+}).catch(error =>{
+  console.error(error)
+})
 }
+}
+}
+
 </script>
+
 
 <style>
 *{
