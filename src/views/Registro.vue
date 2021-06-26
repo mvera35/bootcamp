@@ -1,6 +1,6 @@
 <template>
     <div class="fondo-login">
-     <Ingreso/>
+     <Ingreso :Titulo="Titulo" backgroundImage="registro.jpg"/>
 
     </div>
 </template>
@@ -8,6 +8,11 @@
 <script>
 import Ingreso from '../components/Ingreso.vue'
 export default {
+  data() {
+    return {
+      Titulo: 'Registro'
+    }
+  },
   name: 'Registro',
   components:{
     Ingreso
