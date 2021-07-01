@@ -18,10 +18,12 @@
                          </v-text-field>
                          <v-text-field label="Contraseña" name="password" type="password"  color="#0F1B68" v-model="password">
                          </v-text-field>
+                          <v-text-field label="Repetir Contraseña" name="password" type="password"  color="#0F1B68">
+                         </v-text-field>
                       </v-form>
                     </v-card-text>
                     <div class="boton">
-                      <v-btn rounded color="#000B54" dark @click="loginButtonPressed">Ingresar</v-btn>
+                      <v-btn rounded color="#000B54" dark @click="Register">Ingresar</v-btn>
                     </div>
                 </v-col>
                 </v-row>
@@ -62,21 +64,13 @@ export default {
       };
     }
   },
-
-created(){
-    auth.onAuthStateChanged(userAuth =>{
-        if(userAuth){
-         auth.currentUser.getIdTokenResult()            
-         .then(tokenResult =>{
-             console.log(tokenResult.claims);
-         })
-        }
-    })
-},
    methods: {
-        async loginButtonPressed() {
+        async Register() {
             try {     
-         await auth.signInWithEmailAndPassword(this.email,this.password)
+              await auth.createUserWithEmailAndPassword(this.email,this.password)
+              .then(() =>{
+              this.$router.push("/");
+              })
 
             } catch (error) {
                 console.log(error);

@@ -36,7 +36,11 @@ const routes = [
 			import(
 				/* webpackChunkName: "about" */ "../views/Login.vue"
 			),
+			meta: {
+				guest: true
+			 }		
 	},
+	
 ];
 
 const router = new VueRouter({
