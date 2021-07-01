@@ -36,7 +36,8 @@ export default {
 
 <style scoped>
 .fondo-login {
-    height: 100vh;
+    flex: 1;
+    height: 100%;
     background: #dfe2f5;
 }
 </style>

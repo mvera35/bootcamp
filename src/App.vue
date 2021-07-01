@@ -13,6 +13,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    display: flex;
+    flex-direction: column;
 }
 
 #nav {
@@ -26,10 +28,6 @@
             color: #42b983;
         }
     }
-}
-.fondo-login{
-  height: 100vh;
-  background-image: linear-gradient(#8B96FC,#010C55);
 }
 
 </style>
