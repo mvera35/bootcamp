@@ -7,7 +7,6 @@
 </template>
 
 <style lang="scss">
-<<<<<<< HEAD
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -28,11 +27,9 @@
         }
     }
 }
-=======
 .fondo-login{
   height: 100vh;
   background-image: linear-gradient(#8B96FC,#010C55);
 }
 
->>>>>>> 087207b (Estilos de vista Registro)
 </style>
