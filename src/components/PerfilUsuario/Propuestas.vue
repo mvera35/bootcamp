@@ -11,13 +11,25 @@
         </v-text-field>
       </div>
     </div>
-    <div class="lados"></div>
+    <div class="lados">
+      <div class="mt-10">
+        <span class="text-h4 font-weight-bold grey--text text--darken-3">
+          Empresas
+        </span>
+      </div>
+      <CartaEmpresa />
+      <CartaEmpresa />
+    </div>
   </div>
 </template>
 
 <script>
+import CartaEmpresa from "./CartaEmpresa.vue";
 export default {
   name: "Propuestas",
+  components: {
+    CartaEmpresa,
+  },
 };
 </script>
 
