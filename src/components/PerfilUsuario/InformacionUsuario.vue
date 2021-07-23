@@ -13,14 +13,23 @@
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
+
             </p>
         </v-card-text>
+        <v-card-actions>
+            <Editar absolute right bottom/>
+        </v-card-actions>
     </v-card>
 </template>
 
 <script>
+import Editar from "@/components/Buttons/Editar";
+
 export default {
     name: "Informacion",
+    components: {
+        Editar,
+    },
 };
 </script>
 
@@ -29,4 +38,5 @@ export default {
     border-bottom: 1px solid #9e9e9e;
     margin: 0 0 15px 0;
 }
+
 </style>
