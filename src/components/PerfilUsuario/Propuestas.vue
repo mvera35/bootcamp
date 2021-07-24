@@ -10,6 +10,10 @@
         >
         </v-text-field>
       </div>
+
+      <CartaPuesto />
+      <CartaPuesto />
+      <CartaPuesto />
     </div>
     <div class="lados">
       <div class="mt-10">
@@ -25,10 +29,12 @@
 
 <script>
 import CartaEmpresa from "./CartaEmpresa.vue";
+import CartaPuesto from "./CartaPuesto.vue";
 export default {
   name: "Propuestas",
   components: {
     CartaEmpresa,
+    CartaPuesto,
   },
 };
 </script>
